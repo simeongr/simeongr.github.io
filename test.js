@@ -16,8 +16,8 @@ function showMoreButton(text, i) {
 
 let checkboxes = `<fieldset>`
 for (var i = 0; i < 45; i++) {
-    classText = trimString(classes[i], i);
-    showMoreButton = showMoreButton(classes[i], i)
+    const classText = trimString(classes[i], i);
+    const moreButton = showMoreButton(classes[i], i)
     checkboxes += `
     <div id="tmclass${i+1}" class="fusion-form-checkbox">
         <input
@@ -30,7 +30,7 @@ for (var i = 0; i < 45; i++) {
           data-holds-private-data="false"
         />
         <label for="checkbox-checkedclasses-1-${i}"> ${classText} </label>
-        ${showMoreButton}
+        ${moreButton}
     </div>`
 }
 checkboxes+=`</fieldset>`
