@@ -1,19 +1,19 @@
 let inputFilter = () => {
     let filterElementValue = document.getElementById("filter").value.toLowerCase();
   
-    for (var i = 0; i < classes.length; i++) {
-      if (classes[i].toLowerCase().includes(filterElementValue) || classItems[i].toLowerCase().includes(filterElementValue)) {
-        document.getElementById(ids[i]).removeAttribute("hidden");
+    for (var i = 0; i < classDefinitions.length; i++) {
+      if (classDefinitions[i].toLowerCase().includes(filterElementValue) || classItems[i].toLowerCase().includes(filterElementValue)) {
+        document.getElementById(checkboxIDs[i]).removeAttribute("hidden");
       } else {
-        if (!document.getElementById(idsOld[i]).checked) {
-          document.getElementById(ids[i]).setAttribute("hidden", "hidden");
+        if (!document.getElementById(checkboxInputIDs[i]).checked) {
+          document.getElementById(checkboxIDs[i]).setAttribute("hidden", "hidden");
         }
       }
     }
   
     if (!filterElementValue) {
-      for (var i = 0; i < classes.length; i++) {
-        document.getElementById(ids[i]).removeAttribute("hidden");
+      for (var i = 0; i < classDefinitions.length; i++) {
+        document.getElementById(checkboxIDs[i]).removeAttribute("hidden");
       }
     }
   };

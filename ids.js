@@ -1,4 +1,4 @@
-const ids = [
+const checkboxIDs = [
     "tmclass1",
     "tmclass2",
     "tmclass3",
@@ -46,7 +46,7 @@ const ids = [
     "tmclass45",
   ];
   
-  const idsOld = [
+  const checkboxInputIDs = [
     "checkbox-checkedclasses-1-0",
     "checkbox-checkedclasses-1-1",
     "checkbox-checkedclasses-1-2",
