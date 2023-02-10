@@ -22,7 +22,7 @@ let checkboxes1 = `
 for (var i = 0; i < 45; i++) {
   checkboxes1 += `
       <div class="panel-heading">
-        <h4 class="panel-title toggle" id="toggle_b33815b31fa94dcf1">
+        <h4 class="panel-title toggle" id="toggle_${i}">
           <a
             aria-expanded="false"
             aria-controls="b33815b31fa94dcf1"
@@ -42,14 +42,14 @@ for (var i = 0; i < 45; i++) {
                 aria-hidden="true"
               ></i>
             </span>
-            <span class="fusion-toggle-heading">Клас ${i+1}</span>
+            <span class="fusion-toggle-heading">${classDefinitions[i]}</span>
           </a>
         </h4>
       </div>
       <div
         id="b33815b31fa94dcf1"
         class="panel-collapse collapse"
-        araia-labelledby="toggle_b33815b31fa94dcf1"
+        araia-labelledby="toggle_${i}"
       >
         <div class="panel-body toggle-content fusion-clearfix">
           <ul>
