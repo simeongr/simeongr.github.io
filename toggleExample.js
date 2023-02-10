@@ -1,4 +1,4 @@
-let checkboxes += `
+let checkboxes = `
 <div class="accordian fusion-accordian">
   <div class="panel-group" id="accordion-1776-2">
     <style type="text/css">
