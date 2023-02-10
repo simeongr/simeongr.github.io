@@ -1,4 +1,4 @@
-let checkboxes = `
+let checkboxes1 = `
 <div class="accordian fusion-accordian">
   <div class="panel-group" id="accordion-1776-2">
     <style type="text/css">
@@ -20,7 +20,7 @@ let checkboxes = `
 `;
 
 for (var i = 0; i < 45; i++) {
-  checkboxes += `
+  checkboxes1 += `
       <div class="panel-heading">
         <h4 class="panel-title toggle" id="toggle_b33815b31fa94dcf1">
           <a
@@ -61,10 +61,10 @@ for (var i = 0; i < 45; i++) {
       </div>
 `
 };
-checkboxes += `
+checkboxes1 += `
 </div>
 </div>
 </div>
 `;
 
-document.write(checkboxes)
+document.write(checkboxes1)
