@@ -1,4 +1,4 @@
-const checkboxIDs = [
+export const checkboxIDs = [
     "tmclass1",
     "tmclass2",
     "tmclass3",
@@ -46,7 +46,7 @@ const checkboxIDs = [
     "tmclass45",
   ];
   
-  const checkboxInputIDs = [
+  export const checkboxInputIDs = [
     "checkbox-checkedclasses-1-0",
     "checkbox-checkedclasses-1-1",
     "checkbox-checkedclasses-1-2",
