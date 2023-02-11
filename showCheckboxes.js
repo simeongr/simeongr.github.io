@@ -25,7 +25,7 @@ function showMoreButton(text, i) {
 }
 
 export function showCheckboxes() {
-  let checkboxes = `<fieldset>`;
+  let checkboxes = ``;
   for (var i = 0; i < 45; i++) {
     const classText = trimString(classDefinitions[i], i);
     const moreButton = showMoreButton(classDefinitions[i], i);
@@ -44,8 +44,13 @@ export function showCheckboxes() {
         ${moreButton}
     </div>`;
   }
-  checkboxes += `</fieldset>`;
-  document.write(checkboxes);
+//   checkboxes += `</fieldset>`;
+//   document.write(checkboxes);
+// document.getElementById("classCheckboxesForm")
+var container = document.getElementById("classCheckboxesForm");
+var content = document.createElement("span");
+content.innerHTML = checkboxes;
+container.appendChild(content);
 
   let itemcheckboxes = "";
   for (var i = 0; i < 45; i++) {

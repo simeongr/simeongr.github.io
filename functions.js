@@ -4,6 +4,13 @@ import { showCheckboxes } from './showCheckboxes.js';
 import { checkboxIDs, checkboxInputIDs } from './ids.js';
 import { classItems } from './classItems.js';
 
+{/* <script type='text/javascript' src="https://simeongr.github.io/classDefinitions.js"></script>
+<script type='text/javascript' src="https://simeongr.github.io/items.js"></script>
+<script type='text/javascript' src="https://simeongr.github.io/showCheckboxes.js"></script>
+<script type='text/javascript' src="https://simeongr.github.io/ids.js"></script>
+<script type='text/javascript' src="https://simeongr.github.io/classItems.js"></script>
+<script type='text/javascript' src="https://simeongr.github.io/functions.js"></script> */}
+
 showCheckboxes();
 
 let inputFilter = () => {
