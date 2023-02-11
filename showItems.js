@@ -27,7 +27,7 @@ for (var i = 0; i < 45; i++) {
     t.addEventListener("change", function(){
       if (this.checked) {
         document
-            .getElementById(`classItem-${i}`)
+            .getElementById("classItem-0")
             .removeAttribute("hidden");
       } else {
         document
