@@ -31,7 +31,7 @@ for (var i = 0; i < 45; i++) {
             .removeAttribute("hidden");
       } else {
         document
-            .getElementById(`classItem-${i}`)
+            .getElementById(`classItem-0`)
             .setAttribute("hidden", "hidden");
       }
     })
