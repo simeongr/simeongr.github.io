@@ -49,7 +49,7 @@ export function showClassDefinitions() {
   for (var i = 0; i < 45; i++) {
     const classText = trimString(classDefinitions[i], i);
     const moreButton = showMoreButton(classDefinitions[i], i);
-    const itemID = `tmclass${i+1}`
+    const itemID = `tmclass${i + 1}`;
     checkboxes += `
     <div id="tmclass${i + 1}" class="fusion-form-checkbox">
         <input
