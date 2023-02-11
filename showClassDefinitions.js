@@ -59,7 +59,7 @@ export function showClassDefinitions() {
           name="checkedclasses[]"
           class="fusion-form-input"
           data-holds-private-data="false"
-          onClick='showClassItems(this, tmclass${i + 1});'
+          onClick=`showClassItems(this, tmclass${i + 1});`
         />
         <label for="checkbox-checkedclasses-1-${i}"> ${classText} </label>
         ${moreButton}
