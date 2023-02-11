@@ -1,5 +1,6 @@
+let itemcheckboxes = ""
 for (var i = 0; i < 45; i++) {
-    let itemcheckboxes = `<fieldset> <legend>Клас ${i+1}</legend>`;
+    itemcheckboxes = `<fieldset> <legend>Клас ${i+1}</legend>`;
   for (var j = 0; j < classItemArrays[i].length; j++) {
     const item = classItemArrays[i][j];
     itemcheckboxes += `
@@ -16,7 +17,7 @@ for (var i = 0; i < 45; i++) {
         <label for="checkbox-checkedItems-1-${i}-${item}"> ${item} </label>
     </div>`;
   }
+  itemcheckboxes += `</fieldset>`;
 }
 
-itemcheckboxes += `</fieldset>`;
 document.write(itemcheckboxes);
