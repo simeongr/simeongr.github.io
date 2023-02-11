@@ -1,4 +1,5 @@
 import { classDefinitions } from './classDefinitions.js';
+import { classItemArrays } from './items.js';
 
 // Lists all 45 TM classes as checkboxes
 function trimString(text, i) {
