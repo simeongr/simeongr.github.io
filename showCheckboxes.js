@@ -1,3 +1,5 @@
+import { classDefinitions } from './classDefinitions.js';
+
 // Lists all 45 TM classes as checkboxes
 function trimString(text, i) {
   if (text.length < 100) {
