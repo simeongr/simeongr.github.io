@@ -3,10 +3,10 @@ window.onload = function () {
     const t = document.getElementById(checkboxIDs[i]);
     t.addEventListener("change", function () {
       if (this.checked) {
-        document.getElementById(`classItem-${i}`).removeAttribute("hidden");
+        document.getElementById(`classItem-0`).removeAttribute("hidden");
       } else {
         document
-          .getElementById(`classItem-${i}`)
+          .getElementById(`classItem-0`)
           .setAttribute("hidden", "hidden");
       }
     });
