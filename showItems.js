@@ -1,6 +1,6 @@
 let itemcheckboxes = ""
 for (var i = 0; i < 45; i++) {
-    itemcheckboxes += `<fieldset id="classItem-${i}" hidden="hidden"> <legend>Клас ${i+1}</legend>`;
+    itemcheckboxes += `<fieldset id="tmclass${i}-item-list" hidden="hidden"> <legend>Клас ${i+1}</legend>`;
   for (var j = 0; j < classItemArrays[i].length; j++) {
     const item = classItemArrays[i][j];
     itemcheckboxes += `

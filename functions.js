@@ -1,19 +1,11 @@
 import { classDefinitions } from './classDefinitions.js';
-import { classItemArrays } from './items.js';
-import { showCheckboxes } from './showCheckboxes.js';
+import { showClassDefinitions } from './showClassDefinitions.js';
 import { checkboxIDs, checkboxInputIDs } from './ids.js';
 import { classItems } from './classItems.js';
 
-{/* <script type='text/javascript' src="https://simeongr.github.io/classDefinitions.js"></script>
-<script type='text/javascript' src="https://simeongr.github.io/items.js"></script>
-<script type='text/javascript' src="https://simeongr.github.io/showCheckboxes.js"></script>
-<script type='text/javascript' src="https://simeongr.github.io/ids.js"></script>
-<script type='text/javascript' src="https://simeongr.github.io/classItems.js"></script>
-<script type='text/javascript' src="https://simeongr.github.io/functions.js"></script> */}
+showClassDefinitions();
 
-showCheckboxes();
-
-let inputFilter = () => {
+function inputFilter() {
   let filterElementValue = document
     .getElementById("filter")
     .value.toLowerCase();
@@ -40,21 +32,6 @@ let inputFilter = () => {
   }
 };
 
-let input = document.getElementById("filter");
-input.addEventListener("input", inputFilter);
-
-for (var i = 0; i < 45; i++) {
-  document
-    .getElementById(checkboxIDs[i])
-    .addEventListener("change", function () {
-      if (this.checked) {
-        document.getElementById(`classItem-0`).removeAttribute("hidden");
-      } else {
-        document.getElementById(`classItem-0`).setAttribute("hidden", "hidden");
-      }
-    });
-}
-
 function showMore(button, dotsID, moreID) {
   var dots = document.getElementById(dotsID);
   var moreText = document.getElementById(moreID);
@@ -69,3 +46,18 @@ function showMore(button, dotsID, moreID) {
     moreText.style.display = "inline";
   }
 }
+
+let input = document.getElementById("filter");
+input.addEventListener("input", inputFilter);
+
+// for (var i = 0; i < 45; i++) {
+//   document
+//     .getElementById(checkboxIDs[i])
+//     .addEventListener("change", function () {
+//       if (this.checked) {
+//         document.getElementById(`classItem-0`).removeAttribute("hidden");
+//       } else {
+//         document.getElementById(`classItem-0`).setAttribute("hidden", "hidden");
+//       }
+//     });
+// }
