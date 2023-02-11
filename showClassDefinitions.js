@@ -49,6 +49,7 @@ export function showClassDefinitions() {
   for (var i = 0; i < 45; i++) {
     const classText = trimString(classDefinitions[i], i);
     const moreButton = showMoreButton(classDefinitions[i], i);
+    const itemID = `tmclass${i+1}`
     checkboxes += `
     <div id="tmclass${i + 1}" class="fusion-form-checkbox">
         <input
@@ -59,7 +60,7 @@ export function showClassDefinitions() {
           name="checkedclasses[]"
           class="fusion-form-input"
           data-holds-private-data="false"
-          onClick=`showClassItems(this, tmclass${i + 1});`
+          onClick='showClassItems(this, itemID);'
         />
         <label for="checkbox-checkedclasses-1-${i}"> ${classText} </label>
         ${moreButton}
