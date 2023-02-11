@@ -1,5 +1,5 @@
-let itemcheckboxes = `<fieldset>`;
 for (var i = 0; i < 45; i++) {
+    let itemcheckboxes = `<fieldset> <legend>Клас ${i+1}</legend>`;
   for (var j = 0; j < classItemArrays[i].length; j++) {
     const item = classItemArrays[i][j];
     itemcheckboxes += `
