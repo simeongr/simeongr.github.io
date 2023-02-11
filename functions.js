@@ -1,3 +1,11 @@
+import { classDefinitions } from './classDefinitions.js';
+import { classItemArrays } from './items.js';
+import { showCheckboxes } from './showCheckboxes.js';
+import { checkboxIDs, checkboxInputIDs } from './ids.js';
+import { classItems } from './classItems.js';
+
+showCheckboxes();
+
 let inputFilter = () => {
   let filterElementValue = document
     .getElementById("filter")

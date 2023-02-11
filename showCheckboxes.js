@@ -15,6 +15,7 @@ function showMoreButton(text, i) {
     return ''
 }
 
+export showCheckboxes function() {
 let checkboxes = `<fieldset>`
 for (var i = 0; i < 45; i++) {
     const classText = trimString(classDefinitions[i], i);
@@ -60,3 +61,4 @@ for (var i = 0; i < 45; i++) {
 }
 
 document.write(itemcheckboxes);
+}
