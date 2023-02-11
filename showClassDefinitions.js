@@ -67,5 +67,5 @@ export function showClassDefinitions() {
   }
 
   var content = (document.createElement("span").innerHTML = checkboxes);
-  document.getElementById("classCheckboxesForm").fieldsetDoc.appendChild(content);
+  document.getElementById("classCheckboxesForm").appendChild(content);
 }
