@@ -1,14 +1,14 @@
-for (var i = 0; i < 45; i++) {
-    const t = document.getElementById(checkboxIDs[i])
-    t.addEventListener("change", function(){
+window.onload = function () {
+  for (var i = 0; i < 45; i++) {
+    const t = document.getElementById(checkboxIDs[i]);
+    t.addEventListener("change", function () {
       if (this.checked) {
-        document
-            .getElementById(`classItem-${i}`)
-            .removeAttribute("hidden");
+        document.getElementById(`classItem-${i}`).removeAttribute("hidden");
       } else {
         document
-            .getElementById(`classItem-${i}`)
-            .setAttribute("hidden", "hidden");
+          .getElementById(`classItem-${i}`)
+          .setAttribute("hidden", "hidden");
       }
-    })
+    });
   }
+};
