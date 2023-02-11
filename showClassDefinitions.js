@@ -1,9 +1,9 @@
 // These functions require to add:
 // <script>document.write(`<fieldset id="classCheckboxesForm"></fieldset>`)</script>
 // in WP code block
-// 
+//
 // Example:
-// 
+//
 // <script>document.write(`<fieldset id="classCheckboxesForm"></fieldset>`)</script>
 // <script type='module' src="https://simeongr.github.io/functions.js"></script>
 
@@ -34,8 +34,8 @@ function showMoreButton(text, i) {
   return "";
 }
 
-function showClassItems(c, classID){
-  const itemID = `${classID}-item-list`
+function showClassItems(c, classID) {
+  const itemID = `${classID}-item-list`;
   if (c.checked) {
     document.getElementById(itemID).removeAttribute("hidden");
   } else {
@@ -66,6 +66,11 @@ export function showClassDefinitions() {
     </div>`;
   }
 
-  var content = (document.createElement("span").innerHTML = checkboxes);
-  document.getElementById("classCheckboxesForm").appendChild(content);
+  // var content = (document.createElement("span").innerHTML = checkboxes);
+  // document.getElementById("classCheckboxesForm").appendChild(content);
+
+  var container = document.getElementById("classCheckboxesForm");
+  var content = document.createElement("span");
+  content.innerHTML = checkboxes;
+  container.appendChild(content);
 }
