@@ -1,3 +1,4 @@
+// <script>document.write(`<fieldset id="classItemsCheckboxesForm"></fieldset>`)</script>
 import { classItemArrays } from "./items.js";
 
 let itemcheckboxes = "";
@@ -24,4 +25,7 @@ for (var i = 0; i < 45; i++) {
   itemcheckboxes += `</fieldset>`;
 }
 
-document.write(itemcheckboxes);
+var container = document.getElementById("classItemsCheckboxesForm");
+var content = document.createElement("span");
+content.innerHTML = itemcheckboxes;
+container.appendChild(content);
