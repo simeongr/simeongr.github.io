@@ -3,11 +3,11 @@ for (var i = 0; i < 45; i++) {
     t.addEventListener("change", function(){
       if (this.checked) {
         document
-            .getElementById("classItem-0")
+            .getElementById(`classItem-${i}`)
             .removeAttribute("hidden");
       } else {
         document
-            .getElementById(`classItem-0`)
+            .getElementById(`classItem-${i}`)
             .setAttribute("hidden", "hidden");
       }
     })
