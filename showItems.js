@@ -1,4 +1,4 @@
-let itemcheckboxes = '';
+let itemcheckboxes = ``;
 for (var i = 0; i < 45; i++) {
   itemcheckboxes += `<fieldset id="tmclass${i}-item-list" hidden="hidden"> <legend>Клас ${
     i + 1

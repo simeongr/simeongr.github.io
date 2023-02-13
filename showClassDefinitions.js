@@ -13,7 +13,7 @@
 // import { classItems } from './classItems.js';
 
 // Trim class definition up to 100 characters
-let trimString =  (text, i) => {
+let trimString = (text, i) => {
   if (text.length < 100) {
     return text;
   }
@@ -25,7 +25,7 @@ let trimString =  (text, i) => {
     100,
     text.length
   )}</span>`;
-}
+};
 
 let showMore = (button, dotsID, moreID) => {
   var dots = document.getElementById(dotsID);
@@ -40,16 +40,16 @@ let showMore = (button, dotsID, moreID) => {
     button.innerText = "Покажи по-малко";
     moreText.style.display = "inline";
   }
-}
+};
 
 // Shows 'Покажи още' button when the class definition is more than 100 characters long
-let showMoreButton = (text, i)=> {
+let showMoreButton = (text, i) => {
   if (text.length > 100) {
     return `<a onclick="showMore(this, 'dots${i}', 'more${i}')">Покажи още</a>`;
   }
 
   return "";
-}
+};
 
 let showClassItems = (c, classID) => {
   const itemID = `${classID}-item-list`;
@@ -58,16 +58,16 @@ let showClassItems = (c, classID) => {
   } else {
     document.getElementById(itemID).setAttribute("hidden", "hidden");
   }
-}
+};
 
 // List all 45 class definition as checkboxes
 // export function showClassDefinitions() {
-  let checkboxes = ``;
-  for (var i = 0; i < 45; i++) {
-    const classText = trimString(classDefinitions[i], i);
-    const moreButton = showMoreButton(classDefinitions[i], i);
-    const itemID = `tmclass${i}`;
-    checkboxes += `
+let checkboxes = ``;
+for (var i = 0; i < 45; i++) {
+  const classText = trimString(classDefinitions[i], i);
+  const moreButton = showMoreButton(classDefinitions[i], i);
+  const itemID = `tmclass${i}`;
+  checkboxes += `
     <div id="tmclass${i + 1}" class="fusion-form-checkbox">
         <input
           tabindex=""
@@ -82,12 +82,12 @@ let showClassItems = (c, classID) => {
         <label for="checkbox-checkedclasses-1-${i}"> ${classText} </label>
         ${moreButton}
     </div>`;
-  }
+}
 
-  var container = document.getElementById("classCheckboxesForm");
-  var content = document.createElement("span");
-  content.innerHTML = checkboxes;
-  container.appendChild(content);
+var container = document.getElementById("classCheckboxesForm");
+var content = document.createElement("span");
+content.innerHTML = checkboxes;
+container.appendChild(content);
 // }
 
 let inputFilter = () => {
