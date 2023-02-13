@@ -1,11 +1,11 @@
-let itemcheckboxes = ``;
+let itemCheckboxes = ``;
 for (var i = 0; i < 45; i++) {
-  itemcheckboxes += `<fieldset id="tmclass${i}-item-list" hidden="hidden"> <legend>Клас ${
+  itemCheckboxes += `<fieldset id="tmclass${i}-item-list" hidden="hidden"> <legend>Клас ${
     i + 1
   }</legend>`;
   for (var j = 0; j < classItemArrays[i].length; j++) {
     const item = classItemArrays[i][j];
-    itemcheckboxes += `
+    itemCheckboxes += `
     <div id="tmclass${i + 1}-${item}" class="fusion-form-checkbox">
         <input
           tabindex=""
@@ -19,12 +19,12 @@ for (var i = 0; i < 45; i++) {
         <label for="checkbox-checkedItems-1-${i}-${item}"> ${item} </label>
     </div>`;
   }
-  itemcheckboxes += `</fieldset>`;
+  itemCheckboxes += `</fieldset>`;
 }
 
 var container = document.getElementById("classItemsCheckboxesForm");
 var content = document.createElement("span");
-content.innerHTML = itemcheckboxes;
+content.innerHTML = itemCheckboxes;
 container.appendChild(content);
 
 function inputItemsFilter() {
@@ -53,5 +53,5 @@ function inputItemsFilter() {
   //   }
 }
 
-let input = document.getElementById("filterItems");
-input.addEventListener("input", inputItemsFilter);
+let filterItemsInput = document.getElementById("filterItems");
+input.addEventListener("input", filterItemsInput);
