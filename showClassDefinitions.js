@@ -27,6 +27,21 @@ let trimString =  (text, i) => {
   )}</span>`;
 }
 
+let showMore = (button, dotsID, moreID) => {
+  var dots = document.getElementById(dotsID);
+  var moreText = document.getElementById(moreID);
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    button.innerText = "Покажи още";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    button.innerText = "Покажи по-малко";
+    moreText.style.display = "inline";
+  }
+}
+
 // Shows 'Покажи още' button when the class definition is more than 100 characters long
 let showMoreButton = (text, i)=> {
   if (text.length > 100) {
@@ -101,21 +116,6 @@ let inputFilter = () => {
     }
   }
 };
-
-let showMore = (button, dotsID, moreID) => {
-  var dots = document.getElementById(dotsID);
-  var moreText = document.getElementById(moreID);
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    button.innerText = "Покажи още";
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    button.innerText = "Покажи по-малко";
-    moreText.style.display = "inline";
-  }
-}
 
 let input = document.getElementById("filter");
 input.addEventListener("input", inputFilter);
