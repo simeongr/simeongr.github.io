@@ -1,5 +1,5 @@
 import { classDefinitions } from './classDefinitions.js';
-import { showClassDefinitions } from './showClassDefinitions.js';
+import { showClassItems, showClassDefinitions } from './showClassDefinitions.js';
 import { checkboxIDs, checkboxInputIDs } from './ids.js';
 import { classItems } from './classItems.js';
 

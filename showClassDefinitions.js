@@ -34,7 +34,7 @@ function showMoreButton(text, i) {
   return "";
 }
 
-function showClassItems(c, classID) {
+export function showClassItems(c, classID) {
   const itemID = `${classID}-item-list`;
   if (c.checked) {
     document.getElementById(itemID).removeAttribute("hidden");
@@ -66,9 +66,6 @@ export function showClassDefinitions() {
         ${moreButton}
     </div>`;
   }
-
-  // var content = (document.createElement("span").innerHTML = checkboxes);
-  // document.getElementById("classCheckboxesForm").appendChild(content);
 
   var container = document.getElementById("classCheckboxesForm");
   var content = document.createElement("span");
