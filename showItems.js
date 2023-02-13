@@ -37,12 +37,12 @@ function inputItemsFilter() {
 
   for (var i = 0; i < classItemArrays.length; i++) {
     for (var j = 0; j < classItemArrays[i].length; j++) {
-        const item = classItemArrays[i][j];
+      const item = classItemArrays[i][j];
       const itemID = `checkbox-checkedItems-1-${i}-${item}`;
       if (item.toLowerCase().includes(filterElementValue)) {
         document.getElementById(itemID).removeAttribute("hidden");
       } else {
-        if (!document.getElementById(checkboxInputIDs[i]).checked) {
+        if (!document.getElementById(itemID[i]).checked) {
           document.getElementById(itemID).setAttribute("hidden", "hidden");
         }
       }
