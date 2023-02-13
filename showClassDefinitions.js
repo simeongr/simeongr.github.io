@@ -9,9 +9,11 @@
 
 import { classDefinitions } from "./classDefinitions.js";
 import { classItemArrays } from "./items.js";
+import { checkboxIDs, checkboxInputIDs } from './ids.js';
+import { classItems } from './classItems.js';
 
 // Trim class definition up to 100 characters
-function trimString(text, i) {
+let trimString =  (text, i) => {
   if (text.length < 100) {
     return text;
   }
@@ -26,7 +28,7 @@ function trimString(text, i) {
 }
 
 // Shows 'Покажи още' button when the class definition is more than 100 characters long
-function showMoreButton(text, i) {
+let showMoreButton = (text, i)=> {
   if (text.length > 100) {
     return `<a onclick="showMore(this, 'dots${i}', 'more${i}')">Покажи още</a>`;
   }
@@ -34,7 +36,7 @@ function showMoreButton(text, i) {
   return "";
 }
 
-export function showClassItems(c, classID) {
+let showClassItems = (c, classID) => {
   const itemID = `${classID}-item-list`;
   if (c.checked) {
     document.getElementById(itemID).removeAttribute("hidden");
@@ -44,7 +46,7 @@ export function showClassItems(c, classID) {
 }
 
 // List all 45 class definition as checkboxes
-export function showClassDefinitions() {
+// export function showClassDefinitions() {
   let checkboxes = ``;
   for (var i = 0; i < 45; i++) {
     const classText = trimString(classDefinitions[i], i);
@@ -71,4 +73,49 @@ export function showClassDefinitions() {
   var content = document.createElement("span");
   content.innerHTML = checkboxes;
   container.appendChild(content);
+// }
+
+let inputFilter = () => {
+  let filterElementValue = document
+    .getElementById("filter")
+    .value.toLowerCase();
+
+  for (var i = 0; i < classDefinitions.length; i++) {
+    if (
+      classDefinitions[i].toLowerCase().includes(filterElementValue) ||
+      classItems[i].toLowerCase().includes(filterElementValue)
+    ) {
+      document.getElementById(checkboxIDs[i]).removeAttribute("hidden");
+    } else {
+      if (!document.getElementById(checkboxInputIDs[i]).checked) {
+        document
+          .getElementById(checkboxIDs[i])
+          .setAttribute("hidden", "hidden");
+      }
+    }
+  }
+
+  if (!filterElementValue) {
+    for (var i = 0; i < classDefinitions.length; i++) {
+      document.getElementById(checkboxIDs[i]).removeAttribute("hidden");
+    }
+  }
+};
+
+let showMore = (button, dotsID, moreID) => {
+  var dots = document.getElementById(dotsID);
+  var moreText = document.getElementById(moreID);
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    button.innerText = "Покажи още";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    button.innerText = "Покажи по-малко";
+    moreText.style.display = "inline";
+  }
 }
+
+let input = document.getElementById("filter");
+input.addEventListener("input", inputFilter);

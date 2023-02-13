@@ -1,54 +1,54 @@
-import { classDefinitions } from './classDefinitions.js';
-import { showClassItems, showClassDefinitions } from './showClassDefinitions.js';
-import { checkboxIDs, checkboxInputIDs } from './ids.js';
-import { classItems } from './classItems.js';
+// import { classDefinitions } from './classDefinitions.js';
+// import { showClassItems, showClassDefinitions } from './showClassDefinitions.js';
+// import { checkboxIDs, checkboxInputIDs } from './ids.js';
+// import { classItems } from './classItems.js';
 
-showClassDefinitions();
+// showClassDefinitions();
 
-function inputFilter() {
-  let filterElementValue = document
-    .getElementById("filter")
-    .value.toLowerCase();
+// function inputFilter() {
+//   let filterElementValue = document
+//     .getElementById("filter")
+//     .value.toLowerCase();
 
-  for (var i = 0; i < classDefinitions.length; i++) {
-    if (
-      classDefinitions[i].toLowerCase().includes(filterElementValue) ||
-      classItems[i].toLowerCase().includes(filterElementValue)
-    ) {
-      document.getElementById(checkboxIDs[i]).removeAttribute("hidden");
-    } else {
-      if (!document.getElementById(checkboxInputIDs[i]).checked) {
-        document
-          .getElementById(checkboxIDs[i])
-          .setAttribute("hidden", "hidden");
-      }
-    }
-  }
+//   for (var i = 0; i < classDefinitions.length; i++) {
+//     if (
+//       classDefinitions[i].toLowerCase().includes(filterElementValue) ||
+//       classItems[i].toLowerCase().includes(filterElementValue)
+//     ) {
+//       document.getElementById(checkboxIDs[i]).removeAttribute("hidden");
+//     } else {
+//       if (!document.getElementById(checkboxInputIDs[i]).checked) {
+//         document
+//           .getElementById(checkboxIDs[i])
+//           .setAttribute("hidden", "hidden");
+//       }
+//     }
+//   }
 
-  if (!filterElementValue) {
-    for (var i = 0; i < classDefinitions.length; i++) {
-      document.getElementById(checkboxIDs[i]).removeAttribute("hidden");
-    }
-  }
-};
+//   if (!filterElementValue) {
+//     for (var i = 0; i < classDefinitions.length; i++) {
+//       document.getElementById(checkboxIDs[i]).removeAttribute("hidden");
+//     }
+//   }
+// };
 
-function showMore(button, dotsID, moreID) {
-  var dots = document.getElementById(dotsID);
-  var moreText = document.getElementById(moreID);
+// function showMore(button, dotsID, moreID) {
+//   var dots = document.getElementById(dotsID);
+//   var moreText = document.getElementById(moreID);
 
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    button.innerText = "Покажи още";
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    button.innerText = "Покажи по-малко";
-    moreText.style.display = "inline";
-  }
-}
+//   if (dots.style.display === "none") {
+//     dots.style.display = "inline";
+//     button.innerText = "Покажи още";
+//     moreText.style.display = "none";
+//   } else {
+//     dots.style.display = "none";
+//     button.innerText = "Покажи по-малко";
+//     moreText.style.display = "inline";
+//   }
+// }
 
-let input = document.getElementById("filter");
-input.addEventListener("input", inputFilter);
+// let input = document.getElementById("filter");
+// input.addEventListener("input", inputFilter);
 
 // for (var i = 0; i < 45; i++) {
 //   document
