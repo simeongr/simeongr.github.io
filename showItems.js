@@ -42,18 +42,18 @@ function inputItemsFilter() {
       if (item.toLowerCase().includes(filterElementValue)) {
         document.getElementById(itemID).removeAttribute("hidden");
       } else {
-        if (!document.getElementById(itemID[i]).checked) {
+        if (!document.getElementById(itemID).checked) {
           document.getElementById(itemID).setAttribute("hidden", "hidden");
         }
       }
     }
   }
 
-  if (!filterElementValue) {
-    for (var i = 0; i < classDefinitions.length; i++) {
-      document.getElementById(checkboxIDs[i]).removeAttribute("hidden");
-    }
-  }
+//   if (!filterElementValue) {
+//     for (var i = 0; i < classDefinitions.length; i++) {
+//       document.getElementById(checkboxIDs[i]).removeAttribute("hidden");
+//     }
+//   }
 }
 
 let input = document.getElementById("filterItems");
