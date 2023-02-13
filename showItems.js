@@ -1,5 +1,5 @@
 // <script>document.write(`<fieldset id="classItemsCheckboxesForm"></fieldset>`)</script>
-import { classItemArrays } from "./items.js";
+// import { classItemArrays } from "./items.js";
 
 let itemcheckboxes = "";
 for (var i = 0; i < 45; i++) {
