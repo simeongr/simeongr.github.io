@@ -1,6 +1,3 @@
-// <script>document.write(`<fieldset id="classItemsCheckboxesForm"></fieldset>`)</script>
-// import { classItemArrays } from "./items.js";
-
 let itemcheckboxes = "";
 for (var i = 0; i < 45; i++) {
   itemcheckboxes += `<fieldset id="tmclass${i}-item-list" hidden="hidden"> <legend>Клас ${
@@ -49,11 +46,11 @@ function inputItemsFilter() {
     }
   }
 
-//   if (!filterElementValue) {
-//     for (var i = 0; i < classDefinitions.length; i++) {
-//       document.getElementById(checkboxIDs[i]).removeAttribute("hidden");
-//     }
-//   }
+  //   if (!filterElementValue) {
+  //     for (var i = 0; i < classDefinitions.length; i++) {
+  //       document.getElementById(checkboxIDs[i]).removeAttribute("hidden");
+  //     }
+  //   }
 }
 
 let input = document.getElementById("filterItems");
