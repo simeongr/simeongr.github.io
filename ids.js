@@ -46,7 +46,7 @@ const checkboxIDs = [
     "tmclass45",
   ];
   
-  export const checkboxInputIDs = [
+  const checkboxInputIDs = [
     "checkbox-checkedclasses-1-0",
     "checkbox-checkedclasses-1-1",
     "checkbox-checkedclasses-1-2",
