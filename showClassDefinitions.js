@@ -7,10 +7,10 @@
 // <script>document.write(`<fieldset id="classCheckboxesForm"></fieldset>`)</script>
 // <script type='module' src="https://simeongr.github.io/functions.js"></script>
 
-import { classDefinitions } from "./classDefinitions.js";
-import { classItemArrays } from "./items.js";
-import { checkboxIDs, checkboxInputIDs } from './ids.js';
-import { classItems } from './classItems.js';
+// import { classDefinitions } from "./classDefinitions.js";
+// import { classItemArrays } from "./items.js";
+// import { checkboxIDs, checkboxInputIDs } from './ids.js';
+// import { classItems } from './classItems.js';
 
 // Trim class definition up to 100 characters
 let trimString =  (text, i) => {
