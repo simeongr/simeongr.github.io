@@ -2671,7 +2671,7 @@ const class43Array = ["TODO", "TODO", "TODO"];
 const class44Array = ["TODO", "TODO", "TODO"];
 const class45Array = ["TODO", "TODO", "TODO"];
 
-export const classItemArrays = [
+const classItemArrays = [
   class1Array,
   class2Array,
   class3Array,

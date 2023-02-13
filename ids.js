@@ -1,4 +1,4 @@
-export const checkboxIDs = [
+const checkboxIDs = [
     "tmclass1",
     "tmclass2",
     "tmclass3",
