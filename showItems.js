@@ -29,3 +29,32 @@ var container = document.getElementById("classItemsCheckboxesForm");
 var content = document.createElement("span");
 content.innerHTML = itemcheckboxes;
 container.appendChild(content);
+
+function inputItemsFilter() {
+  let filterElementValue = document
+    .getElementById("filterItems")
+    .value.toLowerCase();
+
+  for (var i = 0; i < classItemArrays.length; i++) {
+    for (var j = 0; j < classItemArrays[i].length; j++) {
+        const item = classItemArrays[i][j];
+      const itemID = `checkbox-checkedItems-1-${i}-${item}`;
+      if (item.toLowerCase().includes(filterElementValue)) {
+        document.getElementById(itemID).removeAttribute("hidden");
+      } else {
+        if (!document.getElementById(checkboxInputIDs[i]).checked) {
+          document.getElementById(itemID).setAttribute("hidden", "hidden");
+        }
+      }
+    }
+  }
+
+  if (!filterElementValue) {
+    for (var i = 0; i < classDefinitions.length; i++) {
+      document.getElementById(checkboxIDs[i]).removeAttribute("hidden");
+    }
+  }
+}
+
+let input = document.getElementById("filterItems");
+input.addEventListener("input", inputItemsFilter);
