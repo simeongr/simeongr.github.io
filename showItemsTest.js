@@ -34,6 +34,8 @@ function inputItemsFilter() {
     for (var j = 0; j < classItemArrays[i].length; j++) {
       const item = classItemArrays[i][j];
       const itemID = `checkbox-checkedItems-1-${i}`;
+    console.log("current item: ", item)
+    console.log("current item ID: ", itemID)
       if (item.toLowerCase().includes(filterElementValue)) {
         console.log("in the if with item: ", item);
         document.getElementById(itemID).removeAttribute("hidden");
