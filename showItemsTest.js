@@ -34,11 +34,11 @@ let inputFilter = () => {
   for (var i = 0; i < classItemArrays.length; i++) {
   for (var j = 0; j < classItemArrays[i].length; j++){ 
     if (classItemArrays[i][j].toLowerCase().includes(filterElementValue)) {
-      document.getElementById(checkboxIDs[i]).removeAttribute("hidden");
+      document.getElementById(`tmclass${i}-item-${j}`).removeAttribute("hidden");
     } else {
       // if (!document.getElementById(checkboxInputIDs[i]).checked) {
         document
-          .getElementById(checkboxIDs[i])
+          .getElementById(`tmclass${i}-item-${j}`)
           .setAttribute("hidden", "hidden");
       // }
     }
