@@ -30,6 +30,7 @@ let inputItemsFilter = () => {
     .getElementById("filterItems")
     .value.toLowerCase();
 
+  console.log("we are in the function woooo")
   for (var i = 0; i < classItemArrays.length; i++) {
     for (var j = 0; j < classItemArrays[i].length; j++) {
       const item = classItemArrays[i][j];
