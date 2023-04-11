@@ -1,58 +1,57 @@
-let itemCheckboxes = ``;
+let checkboxes = ``;
 for (var i = 0; i < 45; i++) {
   for (var j = 0; j < classItemArrays[i].length; j++) {
-    const item = classItemArrays[i][j];
-    itemCheckboxes += `
-    <div id="tmclass${i + 1}-${item}" class="fusion-form-checkbox">
+  const classText = classItemArrays[i][j];
+  const itemID = `tmclass${i}-item-${j}`;
+  checkboxes += `
+    <div id="tmclass${i + 1}" class="fusion-form-checkbox">
         <input
           tabindex=""
-          id="checkbox-checkedItems-1-${i}"
+          id="${itemID}"
           type="checkbox"
-          value="tmclass${i + 1}-${item}"
-          name="checkedItems[]"
+          value="tmclass${i + 1}"
+          name="checkedclasses[]"
           class="fusion-form-input"
           data-holds-private-data="false"
+          onClick="showClassItems(this, '${itemID}')"
         />
-        <label for="checkbox-checkedItems-1-${i}"> ${item} </label>
+        <label for="${itemID}"> ${classText} </label>
+        ${moreButton}
     </div>`;
   }
 }
 
 var container = document.getElementById("classItemsCheckboxesForm");
 var content = document.createElement("span");
-content.innerHTML = itemCheckboxes;
+content.innerHTML = checkboxes;
 container.appendChild(content);
+// }
 
-let inputItemsFilter = () => {
+let inputFilter = () => {
   let filterElementValue = document
-    .getElementById("filterItems")
+    .getElementById("filter")
     .value.toLowerCase();
 
-  console.log("we are in the function woooo")
   for (var i = 0; i < classItemArrays.length; i++) {
-    for (var j = 0; j < classItemArrays[i].length; j++) {
-      const item = classItemArrays[i][j];
-      const itemID = `checkbox-checkedItems-1-${i}`;
-    console.log("current item: ", item)
-    console.log("current item ID: ", itemID)
-      if (item.toLowerCase().includes(filterElementValue)) {
-        console.log("in the if with item: ", item);
-        document.getElementById(itemID).removeAttribute("hidden");
-      } else {
-        console.log("in the else: ", item);
-        if (!document.getElementById(itemID).checked) {
-          document.getElementById(itemID).setAttribute("hidden", "hidden");
-        }
-      }
+  for (var j = 0; j < classItemArrays[i].length; j++){ 
+    if (classItemArrays[i][j].toLowerCase().includes(filterElementValue)) {
+      document.getElementById(checkboxIDs[i]).removeAttribute("hidden");
+    } else {
+      // if (!document.getElementById(checkboxInputIDs[i]).checked) {
+        document
+          .getElementById(checkboxIDs[i])
+          .setAttribute("hidden", "hidden");
+      // }
     }
   }
+  }
 
-  //   if (!filterElementValue) {
-  //     for (var i = 0; i < classDefinitions.length; i++) {
-  //       document.getElementById(checkboxIDs[i]).removeAttribute("hidden");
-  //     }
+  // if (!filterElementValue) {
+  //   for (var i = 0; i < classDefinitions.length; i++) {
+  //     document.getElementById(checkboxIDs[i]).removeAttribute("hidden");
   //   }
+  // }
 };
 
-let filterItemsInput = document.getElementById("filterItems");
-filterItemsInput.addEventListener("filterItemsInput", inputItemsFilter);
+let input = document.getElementById("filter");
+input.addEventListener("input", inputFilter);
