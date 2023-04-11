@@ -1,6 +1,5 @@
 let itemCheckboxes = ``;
 for (var i = 0; i < 45; i++) {
-  itemCheckboxes += `<fieldset id="tmclass${i}-item-list">`;
   for (var j = 0; j < classItemArrays[i].length; j++) {
     const item = classItemArrays[i][j];
     itemCheckboxes += `
@@ -17,7 +16,6 @@ for (var i = 0; i < 45; i++) {
         <label for="checkbox-checkedItems-1-${i}"> ${item} </label>
     </div>`;
   }
-  itemCheckboxes += `</fieldset>`;
 }
 
 var container = document.getElementById("classItemsCheckboxesForm");
