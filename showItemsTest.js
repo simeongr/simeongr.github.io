@@ -4,7 +4,6 @@ for (var i = 0; i < 45; i++) {
   for (var j = 0; j < classItemArrays[i].length; j++) {
     const item = classItemArrays[i][j];
     itemCheckboxes += `
-    <div id="tmclass${i + 1}-${item}" class="fusion-form-checkbox">
         <input
           tabindex=""
           id="checkbox-checkedItems-1-${i}-${item}"
@@ -14,8 +13,7 @@ for (var i = 0; i < 45; i++) {
           class="fusion-form-input"
           data-holds-private-data="false"
         />
-        <label for="checkbox-checkedItems-1-${i}-${item}"> ${item} </label>
-    </div>`;
+        <label for="checkbox-checkedItems-1-${i}-${item}"> ${item} </label>`;
   }
   itemCheckboxes += `</fieldset>`;
 }
