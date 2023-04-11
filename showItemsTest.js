@@ -16,7 +16,6 @@ for (var i = 0; i < 45; i++) {
           onClick="showClassItems(this, '${itemID}')"
         />
         <label for="${itemID}"> ${classText} </label>
-        ${moreButton}
     </div>`;
   }
 }
