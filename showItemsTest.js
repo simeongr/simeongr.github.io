@@ -7,14 +7,14 @@ for (var i = 0; i < 45; i++) {
     <div id="tmclass${i + 1}-${item}" class="fusion-form-checkbox">
         <input
           tabindex=""
-          id="checkbox-checkedItems-1-${i}-${item}"
+          id="checkbox-checkedItems-1-${i}"
           type="checkbox"
           value="tmclass${i + 1}-${item}"
           name="checkedItems[]"
           class="fusion-form-input"
           data-holds-private-data="false"
         />
-        <label for="checkbox-checkedItems-1-${i}-${item}"> ${item} </label>
+        <label for="checkbox-checkedItems-1-${i}"> ${item} </label>
     </div>`;
   }
   itemCheckboxes += `</fieldset>`;
@@ -33,7 +33,7 @@ function inputItemsFilter() {
   for (var i = 0; i < classItemArrays.length; i++) {
     for (var j = 0; j < classItemArrays[i].length; j++) {
       const item = classItemArrays[i][j];
-      const itemID = `checkbox-checkedItems-1-${i}-${item}`;
+      const itemID = `checkbox-checkedItems-1-${i}`;
       if (item.toLowerCase().includes(filterElementValue)) {
         document.getElementById(itemID).removeAttribute("hidden");
       } else {
