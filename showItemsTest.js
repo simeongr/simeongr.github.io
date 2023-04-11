@@ -54,4 +54,4 @@ function inputItemsFilter() {
 }
 
 let filterItemsInput = document.getElementById("filterItems");
-input.addEventListener("filterItemsInput", inputItemsFilter);
+filterItemsInput.addEventListener("filterItemsInput", inputItemsFilter);
