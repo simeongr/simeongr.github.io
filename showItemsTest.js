@@ -35,8 +35,10 @@ function inputItemsFilter() {
       const item = classItemArrays[i][j];
       const itemID = `checkbox-checkedItems-1-${i}`;
       if (item.toLowerCase().includes(filterElementValue)) {
+        console.log("in the if with item: ", item);
         document.getElementById(itemID).removeAttribute("hidden");
       } else {
+        console.log("in the else: ", item);
         if (!document.getElementById(itemID).checked) {
           document.getElementById(itemID).setAttribute("hidden", "hidden");
         }
