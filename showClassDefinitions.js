@@ -95,7 +95,8 @@ let inputFilter = () => {
     .getElementById("filter")
     .value.toLowerCase();
 
-  for (var i = 0; i < classDefinitions.length; i++) {
+  // for (var i = 0; i < classDefinitions.length; i++) {
+  for (var i = 0; i < 10; i++) { // show only the first ten classes
     if (
       classDefinitions[i].toLowerCase().includes(filterElementValue) ||
       classItems[i].toLowerCase().includes(filterElementValue)
