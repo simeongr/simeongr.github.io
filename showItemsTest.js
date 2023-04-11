@@ -25,7 +25,7 @@ var content = document.createElement("span");
 content.innerHTML = itemCheckboxes;
 container.appendChild(content);
 
-function inputItemsFilter() {
+let inputItemsFilter = () => {
   let filterElementValue = document
     .getElementById("filterItems")
     .value.toLowerCase();
@@ -53,7 +53,7 @@ function inputItemsFilter() {
   //       document.getElementById(checkboxIDs[i]).removeAttribute("hidden");
   //     }
   //   }
-}
+};
 
 let filterItemsInput = document.getElementById("filterItems");
 filterItemsInput.addEventListener("filterItemsInput", inputItemsFilter);
