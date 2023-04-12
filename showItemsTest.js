@@ -1,9 +1,10 @@
 let checkboxes = ``;
 for (var i = 0; i < 45; i++) {
+  checkboxes += `<legend>Клас ${i + 1}</legend>`
   for (var j = 0; j < classItemArrays[i].length; j++) {
-  const classText = classItemArrays[i][j];
-  const itemID = `tmclass${i}-item-${j}`;
-  checkboxes += `
+    const classText = classItemArrays[i][j];
+    const itemID = `tmclass${i}-item-${j}`;
+    checkboxes += `
     <div id="${itemID}-div" class="fusion-form-checkbox">
         <input
           tabindex=""
@@ -30,28 +31,26 @@ let inputFilter = () => {
     .value.toLowerCase();
 
   for (var i = 0; i < classItemArrays.length; i++) {
-  for (var j = 0; j < classItemArrays[i].length; j++){ 
-    var divID = `tmclass${i}-item-${j}-div`
-    var itemID = `tmclass${i}-item-${j}`;
-    if (classItemArrays[i][j].toLowerCase().includes(filterElementValue)) {
-      document.getElementById(`${divID}`).removeAttribute("hidden");
-    } else {
-      if (!document.getElementById(itemID).checked) {
-        document
-          .getElementById(`${divID}`)
-          .setAttribute("hidden", "hidden");
+    for (var j = 0; j < classItemArrays[i].length; j++) {
+      var divID = `tmclass${i}-item-${j}-div`;
+      var itemID = `tmclass${i}-item-${j}`;
+      if (classItemArrays[i][j].toLowerCase().includes(filterElementValue)) {
+        document.getElementById(`${divID}`).removeAttribute("hidden");
+      } else {
+        if (!document.getElementById(itemID).checked) {
+          document.getElementById(`${divID}`).setAttribute("hidden", "hidden");
+        }
       }
     }
-  }
   }
 
   if (!filterElementValue) {
     for (var i = 0; i < classItemArrays.length; i++) {
-      for (var j = 0; j < classItemArrays[i].length; j++){
-      var itemID = `tmclass${i}-item-${j}-div`;
-      document.getElementById(itemID).removeAttribute("hidden");
+      for (var j = 0; j < classItemArrays[i].length; j++) {
+        var itemID = `tmclass${i}-item-${j}-div`;
+        document.getElementById(itemID).removeAttribute("hidden");
+      }
     }
-  }
   }
 };
 
