@@ -33,7 +33,7 @@ let inputFilter = () => {
   for (var i = 0; i < classItemArrays.length; i++) {
     for (var j = 0; j < classItemArrays[i].length; j++) {
       var divID = `tmclass${i}-item-${j}-div`;
-      var legendID = `"legend-${i}"`;
+      var legendID = `legend-${i}`;
       var itemID = `tmclass${i}-item-${j}`;
       if (classItemArrays[i][j].toLowerCase().includes(filterElementValue)) {
         document.getElementById(`${legendID}`).removeAttribute("hidden");
@@ -50,7 +50,7 @@ let inputFilter = () => {
   if (!filterElementValue) {
     for (var i = 0; i < classItemArrays.length; i++) {
       for (var j = 0; j < classItemArrays[i].length; j++) {
-        var legendID = `"legend-${i}"`;
+        var legendID = `legend-${i}`;
         var itemID = `tmclass${i}-item-${j}-div`;
         document.getElementById(legendID).removeAttribute("hidden");
         document.getElementById(itemID).removeAttribute("hidden");
