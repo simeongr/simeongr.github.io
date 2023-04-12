@@ -31,6 +31,7 @@ let inputFilter = () => {
     .value.toLowerCase();
 
   for (var i = 0; i < classItemArrays.length; i++) {
+    var hideLegend = false;
     for (var j = 0; j < classItemArrays[i].length; j++) {
       var divID = `tmclass${i}-item-${j}-div`;
       var legendID = `legend-${i}`;
@@ -38,10 +39,13 @@ let inputFilter = () => {
       if (classItemArrays[i][j].toLowerCase().includes(filterElementValue)) {
         document.getElementById(`${legendID}`).removeAttribute("hidden");
         document.getElementById(`${divID}`).removeAttribute("hidden");
+        hideLegend = true;
       } else {
         if (!document.getElementById(itemID).checked) {
           document.getElementById(`${divID}`).setAttribute("hidden", "hidden");
-          document.getElementById(`${legendID}`).setAttribute("hidden", "hidden");
+          if (!hideLegend) {
+            document.getElementById(`${legendID}`).setAttribute("hidden", "hidden");
+          }
         }
       }
     }
