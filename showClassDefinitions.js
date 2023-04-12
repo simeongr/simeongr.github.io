@@ -90,7 +90,7 @@ content.innerHTML = classCheckBoxes;
 container.appendChild(content);
 // }
 
-let inputFilter = () => {
+let inputClassFilter = () => {
   let filterElementValue = document
     .getElementById("filter")
     .value.toLowerCase();
@@ -119,4 +119,4 @@ let inputFilter = () => {
 };
 
 let input = document.getElementById("filter");
-input.addEventListener("input", inputFilter);
+input.addEventListener("input", inputClassFilter);
