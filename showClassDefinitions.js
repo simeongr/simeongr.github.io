@@ -60,14 +60,14 @@ let showClassItems = (c, classID) => {
   }
 };
 
-// List all 45 class definition as checkboxes
+// List all 45 class definition as classCheckBoxes
 // export function showClassDefinitions() {
-let checkboxes = ``;
+let classCheckBoxes = ``;
 for (var i = 0; i < 45; i++) {
   const classText = trimString(classDefinitions[i], i);
   const moreButton = showMoreButton(classDefinitions[i], i);
   const itemID = `tmclass${i}`;
-  checkboxes += `
+  classCheckBoxes += `
     <div id="tmclass${i + 1}" class="fusion-form-checkbox">
         <input
           tabindex=""
@@ -86,7 +86,7 @@ for (var i = 0; i < 45; i++) {
 
 var container = document.getElementById("classCheckboxesForm");
 var content = document.createElement("span");
-content.innerHTML = checkboxes;
+content.innerHTML = classCheckBoxes;
 container.appendChild(content);
 // }
 
