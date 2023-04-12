@@ -32,15 +32,16 @@ let inputFilter = () => {
 
   for (var i = 0; i < classItemArrays.length; i++) {
   for (var j = 0; j < classItemArrays[i].length; j++){ 
-    var itemID = `tmclass${i}-item-${j}-div`;
+    var divID = `tmclass${i}-item-${j}-div`
+    var itemID = `tmclass${i}-item-${j}`;
     if (classItemArrays[i][j].toLowerCase().includes(filterElementValue)) {
-      document.getElementById(`${itemID}`).removeAttribute("hidden");
+      document.getElementById(`${divID}`).removeAttribute("hidden");
     } else {
-      // if (!document.getElementById(checkboxInputIDs[i]).checked) {
+      if (!document.getElementById(itemID).checked) {
         document
-          .getElementById(`${itemID}`)
+          .getElementById(`${divID}`)
           .setAttribute("hidden", "hidden");
-      // }
+      }
     }
   }
   }
