@@ -1,3 +1,18 @@
+let checkFinalDecision = (legendID, divID, itemID) => {
+  var legendIDfinal = `${legendID}-final`
+  var divIDfinal = `${divID}-final`
+  var itemIDfinal = `${itemID}-final`
+  if (!document.getElementById(${itemIDfinal}).checked){
+    document.getElementById(`${legendIDfinal}`).removeAttribute("hidden");
+    document.getElementById(`${divIDfinal}`).removeAttribute("hidden");
+    document.getElementById(${itemIDfinal}).checked = true;
+  } else {
+    document.getElementById(`${legendIDfinal}`).setAttribute("hidden", "hidden");
+    document.getElementById(`${divIDfinal}`).setAttribute("hidden", "hidden");
+    document.getElementById(${itemIDfinal}).checked = false;
+  }
+};
+
 let checkboxes = ``;
 for (var i = 0; i < 45; i++) {
   checkboxes += `<legend id="legend-${i}">Клас ${i + 1}</legend>`
@@ -14,6 +29,7 @@ for (var i = 0; i < 45; i++) {
           name="checkedclasses[]"
           class="fusion-form-input"
           data-holds-private-data="false"
+          onClick="checkFinalDecision(`${legendID}`, `${divID}`, '${itemID}')"
         />
         <label for="${itemID}"> ${classText} </label>
     </div>`;
