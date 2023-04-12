@@ -1,6 +1,6 @@
 let checkboxes = ``;
 for (var i = 0; i < 45; i++) {
-  checkboxes += `<legend>Клас ${i + 1}</legend>`
+  checkboxes += `<legend id="legend-${i}">Клас ${i + 1}</legend>`
   for (var j = 0; j < classItemArrays[i].length; j++) {
     const classText = classItemArrays[i][j];
     const itemID = `tmclass${i}-item-${j}`;
@@ -33,12 +33,15 @@ let inputFilter = () => {
   for (var i = 0; i < classItemArrays.length; i++) {
     for (var j = 0; j < classItemArrays[i].length; j++) {
       var divID = `tmclass${i}-item-${j}-div`;
+      var legendID = `"legend-${i}"`;
       var itemID = `tmclass${i}-item-${j}`;
       if (classItemArrays[i][j].toLowerCase().includes(filterElementValue)) {
+        document.getElementById(`${legendID}`).removeAttribute("hidden");
         document.getElementById(`${divID}`).removeAttribute("hidden");
       } else {
         if (!document.getElementById(itemID).checked) {
           document.getElementById(`${divID}`).setAttribute("hidden", "hidden");
+          document.getElementById(`${legendID}`).setAttribute("hidden", "hidden");
         }
       }
     }
@@ -47,7 +50,9 @@ let inputFilter = () => {
   if (!filterElementValue) {
     for (var i = 0; i < classItemArrays.length; i++) {
       for (var j = 0; j < classItemArrays[i].length; j++) {
+        var legendID = `"legend-${i}"`;
         var itemID = `tmclass${i}-item-${j}-div`;
+        document.getElementById(legendID).removeAttribute("hidden");
         document.getElementById(itemID).removeAttribute("hidden");
       }
     }
