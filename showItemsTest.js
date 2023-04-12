@@ -32,23 +32,27 @@ let inputFilter = () => {
 
   for (var i = 0; i < classItemArrays.length; i++) {
   for (var j = 0; j < classItemArrays[i].length; j++){ 
+    var itemID = `tmclass${i}-item-${j}-div`;
     if (classItemArrays[i][j].toLowerCase().includes(filterElementValue)) {
-      document.getElementById(`tmclass${i}-item-${j}-div`).removeAttribute("hidden");
+      document.getElementById(`${itemID}`).removeAttribute("hidden");
     } else {
       // if (!document.getElementById(checkboxInputIDs[i]).checked) {
         document
-          .getElementById(`tmclass${i}-item-${j}-div`)
+          .getElementById(`${itemID}`)
           .setAttribute("hidden", "hidden");
       // }
     }
   }
   }
 
-  // if (!filterElementValue) {
-  //   for (var i = 0; i < classDefinitions.length; i++) {
-  //     document.getElementById(checkboxIDs[i]).removeAttribute("hidden");
-  //   }
-  // }
+  if (!filterElementValue) {
+    for (var i = 0; i < classItemArrays.length; i++) {
+      for (var j = 0; j < classItemArrays[i].length; j++){
+      var itemID = `tmclass${i}-item-${j}-div`;
+      document.getElementById(itemID).removeAttribute("hidden");
+    }
+  }
+  }
 };
 
 let input = document.getElementById("filter");
