@@ -4,7 +4,7 @@ for (var i = 0; i < 45; i++) {
   const classText = classItemArrays[i][j];
   const itemID = `tmclass${i}-item-${j}`;
   checkboxes += `
-    <div id="tmclass${i + 1}" class="fusion-form-checkbox">
+    <div id="${itemID}-div" class="fusion-form-checkbox">
         <input
           tabindex=""
           id="${itemID}"
@@ -13,7 +13,6 @@ for (var i = 0; i < 45; i++) {
           name="checkedclasses[]"
           class="fusion-form-input"
           data-holds-private-data="false"
-          onClick="showClassItems(this, '${itemID}')"
         />
         <label for="${itemID}"> ${classText} </label>
     </div>`;
@@ -34,11 +33,11 @@ let inputFilter = () => {
   for (var i = 0; i < classItemArrays.length; i++) {
   for (var j = 0; j < classItemArrays[i].length; j++){ 
     if (classItemArrays[i][j].toLowerCase().includes(filterElementValue)) {
-      document.getElementById(`tmclass${i}-item-${j}`).removeAttribute("hidden");
+      document.getElementById(`tmclass${i}-item-${j}-div`).removeAttribute("hidden");
     } else {
       // if (!document.getElementById(checkboxInputIDs[i]).checked) {
         document
-          .getElementById(`tmclass${i}-item-${j}`)
+          .getElementById(`tmclass${i}-item-${j}-div`)
           .setAttribute("hidden", "hidden");
       // }
     }
