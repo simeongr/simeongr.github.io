@@ -118,5 +118,5 @@ let inputClassFilter = () => {
   }
 };
 
-let input = document.getElementById("filter");
-input.addEventListener("input", inputClassFilter);
+let classInput = document.getElementById("filter");
+classInput.addEventListener("classInput", inputClassFilter);
