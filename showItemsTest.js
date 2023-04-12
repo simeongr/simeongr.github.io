@@ -1,9 +1,9 @@
 let checkFinalDecision = (legendID, divID, itemID) => {
-  var legendIDfinal = `${legendID}-final`
-  var divIDfinal = `${divID}-final`
-  var itemIDfinal = `${itemID}-final`
-  
-  if (!document.getElementById(itemIDfinal).checked){
+  var legendIDfinal = `${legendID}-final`;
+  var divIDfinal = `${divID}-final`;
+  var itemIDfinal = `${itemID}-final`;
+
+  if (!document.getElementById(itemIDfinal).checked) {
     document.getElementById(legendIDfinal).removeAttribute("hidden");
     document.getElementById(divIDfinal).removeAttribute("hidden");
     document.getElementById(itemIDfinal).checked = true;
@@ -16,7 +16,7 @@ let checkFinalDecision = (legendID, divID, itemID) => {
 
 let checkboxes = ``;
 for (var i = 0; i < 45; i++) {
-  checkboxes += `<legend id="legend-${i}">Клас ${i + 1}</legend>`
+  checkboxes += `<legend id="legend-${i}">Клас ${i + 1}</legend>`;
   for (var j = 0; j < classItemArrays[i].length; j++) {
     const classText = classItemArrays[i][j];
     const itemID = `tmclass${i}-item-${j}`;
@@ -30,7 +30,7 @@ for (var i = 0; i < 45; i++) {
           name="checkedclasses[]"
           class="fusion-form-input"
           data-holds-private-data="false"
-          onClick="checkFinalDecision('${legendID}', '${divID}', '${itemID}')"
+          onClick="checkFinalDecision('legend-${i}', '${itemID}-div', '${itemID}')"
         />
         <label for="${itemID}"> ${classText} </label>
     </div>`;
@@ -61,7 +61,9 @@ let inputFilter = () => {
         if (!document.getElementById(itemID).checked) {
           document.getElementById(`${divID}`).setAttribute("hidden", "hidden");
           if (!showLegend) {
-            document.getElementById(`${legendID}`).setAttribute("hidden", "hidden");
+            document
+              .getElementById(`${legendID}`)
+              .setAttribute("hidden", "hidden");
           }
         }
       }
