@@ -18,23 +18,25 @@ let rotateArrow = (arrowID, index) => {
   var arrow = document.getElementById(arrowID);
   var arrowOrientation = arrow.className;
   if (arrowOrientation === "arrow right") {
-    arrow.className = "arrow down"
+    arrow.className = "arrow down";
     for (var i = 0; i < classItemArrays[index].length; i++) {
-      var divID = `tmclass${index}-item-${i}`
+      var divID = `tmclass${index}-item-${i}-div`;
       document.getElementById(`${divID}`).removeAttribute("hidden");
     }
   } else {
-    arrow.className = "arrow right"
+    arrow.className = "arrow right";
     for (var i = 0; i < classItemArrays[index].length; i++) {
-      var divID = `tmclass${index}-item-${i}`
+      var divID = `tmclass${index}-item-${i}`;
       document.getElementById(`${divID}`).setAttribute("hidden", "hidden");
     }
   }
-}
+};
 
 let checkboxes = ``;
 for (var i = 0; i < 45; i++) {
-  checkboxes += `<legend id="legend-${i}"><i class="arrow right" id="arrow-${i}" onclick="rotateArrow('arrow-${i}', ${i})"></i> Клас ${i + 1}</legend>`;
+  checkboxes += `<legend id="legend-${i}"><i class="arrow down" id="arrow-${i}" onclick="rotateArrow('arrow-${i}', ${i})"></i> <button onclick="rotateArrow('arrow-${i}', ${i})">Клас ${
+    i + 1
+  }</button></legend>`;
   for (var j = 0; j < classItemArrays[i].length; j++) {
     const classText = classItemArrays[i][j];
     const itemID = `tmclass${i}-item-${j}`;
