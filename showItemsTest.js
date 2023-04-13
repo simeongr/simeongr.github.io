@@ -16,11 +16,10 @@ let checkFinalDecision = (legendID, itemID) => {
 
 let checkboxes = ``;
 for (var i = 0; i < 45; i++) {
-  checkboxes += `<legend id="legend-${i}">Клас ${i + 1}</legend>`;
+  checkboxes += `<i class="arrow right"></i><legend id="legend-${i}">Клас ${i + 1}</legend>`;
   for (var j = 0; j < classItemArrays[i].length; j++) {
     const classText = classItemArrays[i][j];
     const itemID = `tmclass${i}-item-${j}`;
-    // const itemIDfinal = `tmclass${i}-item-${j}-final`;
     checkboxes += `
     <div id="${itemID}-div" class="fusion-form-checkbox">
         <input
