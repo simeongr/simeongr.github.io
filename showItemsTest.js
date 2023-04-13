@@ -20,13 +20,13 @@ let rotateArrow = (arrowID, index) => {
   if (arrowOrientation === "arrow right") {
     arrow.className = "arrow down"
     for (var i = 0; i < classItemArrays[index].length; i++) {
-      var divID = tmclass${index}-item-${i}
+      var divID = `tmclass${index}-item-${i}`
       document.getElementById(`${divID}`).removeAttribute("hidden");
     }
   } else {
     arrow.className = "arrow right"
     for (var i = 0; i < classItemArrays[index].length; i++) {
-      var divID = tmclass${index}-item-${i}
+      var divID = `tmclass${index}-item-${i}`
       document.getElementById(`${divID}`).setAttribute("hidden", "hidden");
     }
   }
