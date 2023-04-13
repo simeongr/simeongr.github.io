@@ -26,7 +26,7 @@ let rotateArrow = (arrowID, index) => {
   } else {
     arrow.className = "arrow right";
     for (var i = 0; i < classItemArrays[index].length; i++) {
-      var divID = `tmclass${index}-item-${i}`;
+      var divID = `tmclass${index}-item-${i}-div`;
       document.getElementById(`${divID}`).setAttribute("hidden", "hidden");
     }
   }
@@ -34,9 +34,9 @@ let rotateArrow = (arrowID, index) => {
 
 let checkboxes = ``;
 for (var i = 0; i < 45; i++) {
-  checkboxes += `<legend id="legend-${i}"><i class="arrow down" id="arrow-${i}" onclick="rotateArrow('arrow-${i}', ${i})"></i> <button onclick="rotateArrow('arrow-${i}', ${i})">Клас ${
+  checkboxes += `<legend id="legend-${i}"><i class="arrow down" id="arrow-${i}" onclick="rotateArrow('arrow-${i}', ${i})"></i> Клас ${
     i + 1
-  }</button></legend>`;
+  }</legend>`;
   for (var j = 0; j < classItemArrays[i].length; j++) {
     const classText = classItemArrays[i][j];
     const itemID = `tmclass${i}-item-${j}`;
