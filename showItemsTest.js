@@ -16,7 +16,7 @@ let checkFinalDecision = (legendID, itemID) => {
 
 let checkboxes = ``;
 for (var i = 0; i < 45; i++) {
-  checkboxes += `<legend id="legend-${i}"><i class="arrow right">Клас ${i + 1}</i></legend>`;
+  checkboxes += `<legend id="legend-${i}"><i class="arrow right" id="arrow-${i}"></i>Клас ${i + 1}</legend>`;
   for (var j = 0; j < classItemArrays[i].length; j++) {
     const classText = classItemArrays[i][j];
     const itemID = `tmclass${i}-item-${j}`;
