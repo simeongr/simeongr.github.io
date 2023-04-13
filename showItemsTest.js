@@ -14,9 +14,19 @@ let checkFinalDecision = (legendID, itemID) => {
   }
 };
 
+let rotateArrow = (arrowID) => {
+  var arrow = document.getElementById(arrowID);
+  var arrowOrientation = arrow.className;
+  if (arrowOrientation === "arrow right") {
+    arrow.className = "arrow down"
+  } else {
+    arrow.className = "arrow right"
+  }
+}
+
 let checkboxes = ``;
 for (var i = 0; i < 45; i++) {
-  checkboxes += `<legend id="legend-${i}"><i class="arrow right" id="arrow-${i}"></i>Клас ${i + 1}</legend>`;
+  checkboxes += `<legend id="legend-${i}"><i class="arrow right" id="arrow-${i}" onclick="rotateArrow('arrow-${i}')"></i> Клас ${i + 1}</legend>`;
   for (var j = 0; j < classItemArrays[i].length; j++) {
     const classText = classItemArrays[i][j];
     const itemID = `tmclass${i}-item-${j}`;
