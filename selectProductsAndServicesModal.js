@@ -44,17 +44,19 @@ let rotateArrow = (arrowID, index) => {
   }
 };
 
+const trimLength = 80;
+
 // Trim class definition up to 100 characters
 let trimString = (text, i) => {
-  if (text.length < 100) {
+  if (text.length < trimLength) {
     return text;
   }
 
   return `${text.substring(
     0,
-    100
+    trimLength
   )}<span id="dots${i}">...</span><span id="more${i}" style="display:none">${text.substring(
-    100,
+    trimLength,
     text.length
   )}</span>`;
 };
@@ -76,7 +78,7 @@ let showMore = (button, dotsID, moreID) => {
 
 // Shows 'Покажи още' button when the class definition is more than 100 characters long
 let showMoreButton = (text, i) => {
-  if (text.length > 100) {
+  if (text.length > trimLength) {
     return `<a onclick="showMore(this, 'dots${i}', 'more${i}')">Покажи още</a>`;
   }
 
@@ -87,7 +89,7 @@ let checkboxes = ``;
 for (var i = 0; i < 45; i++) {
   const classText = `<b>${trimString(classDefinitions[i], i)}</b>`;
   const moreButton = showMoreButton(classDefinitions[i], i);
-  checkboxes += `<legend id="legend-${i}"><i class="arrow right" id="arrow-${i}" onclick="rotateArrow('arrow-${i}', ${i})"></i> ${classText} ${moreButton}</legend>`;
+  checkboxes += `<legend id="legend-${i}"><i class="arrow right" id="arrow-${i}" onclick="rotateArrow('arrow-${i}', ${i})"></i> <span onclick="rotateArrow('arrow-${i}', ${i})">${classText} ${moreButton}</span></legend>`;
   for (var j = 0; j < classItemArrays[i].length; j++) {
     const itemText = classItemArrays[i][j];
     const itemID = `tmclass${i}-item-${j}`;
