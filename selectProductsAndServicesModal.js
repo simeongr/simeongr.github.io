@@ -87,14 +87,12 @@ let checkboxes = ``;
 for (var i = 0; i < 45; i++) {
   const classText = trimString(classDefinitions[i], i);
   const moreButton = showMoreButton(classDefinitions[i], i);
-  checkboxes += `<legend id="legend-${i}"><i class="arrow down" id="arrow-${i}" onclick="rotateArrow('arrow-${i}', ${i})"></i> Клас ${
-    i + 1
-  }: ${classText}${moreButton}</legend>`;
+  checkboxes += `<legend id="legend-${i}"><i class="arrow down" id="arrow-${i}" onclick="rotateArrow('arrow-${i}', ${i})"></i> ${classText} ${moreButton}</legend>`;
   for (var j = 0; j < classItemArrays[i].length; j++) {
     const itemText = classItemArrays[i][j];
     const itemID = `tmclass${i}-item-${j}`;
     checkboxes += `
-    <div id="${itemID}-div" class="fusion-form-checkbox">
+    <div id="${itemID}-div" class="fusion-form-checkbox self-register-checkbox">
         <input
           tabindex=""
           id="${itemID}"
