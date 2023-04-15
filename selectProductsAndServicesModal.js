@@ -85,7 +85,7 @@ let showMoreButton = (text, i) => {
 
 let checkboxes = ``;
 for (var i = 0; i < 45; i++) {
-  const classText = trimString(classDefinitions[i], i);
+  const classText = `<b>${trimString(classDefinitions[i], i)}</b>`;
   const moreButton = showMoreButton(classDefinitions[i], i);
   checkboxes += `<legend id="legend-${i}"><i class="arrow down" id="arrow-${i}" onclick="rotateArrow('arrow-${i}', ${i})"></i> ${classText} ${moreButton}</legend>`;
   for (var j = 0; j < classItemArrays[i].length; j++) {
