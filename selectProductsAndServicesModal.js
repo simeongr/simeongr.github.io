@@ -99,11 +99,11 @@ for (var i = 0; i < 45; i++) {
           type="checkbox"
           value="клас ${i + 1}: ${itemText}"
           name="checkedclasses[]"
-          class="fusion-form-input"
+          class="fusion-form-input self-register-checkbox"
           data-holds-private-data="false"
           onClick="checkFinalDecision('legend-${i}', '${itemID}')"
         />
-        <label for="${itemID}"> ${itemText} </label>
+        <label for="${itemID}" class="self-register-checkbox"> ${itemText} </label>
     </div>`;
   }
 }
