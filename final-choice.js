@@ -53,12 +53,15 @@ setInterval(function () {
 
   if (!hasChecked) {
     var paragraph = document.getElementById("choice");
-    paragraph.innerHTML = `<style>
+    paragraph.innerHTML = `
+    <p style="text-align: center">&#8593;</p>
+    <style>
     .required:after {
       content:" *";
       color: red;
     }
-  </style><div class="required">Моля изберете стоки и услуги!</div>`;
+  </style>
+  <div class="required">Моля изберете стоки и услуги!</div>`;
   }
 
   for (var i = 0; i < 45; i++) {
