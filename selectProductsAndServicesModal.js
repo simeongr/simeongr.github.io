@@ -88,7 +88,7 @@ let showMoreButton = (text, i) => {
 let checkboxes = `
 <style>
 .self-register-checkbox {
-  margin-left: 100px;
+  margin-left: 10px;
 }
 </style>
 `;
