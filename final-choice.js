@@ -60,7 +60,7 @@ setInterval(function () {
       color: red;
     }
   </style>
-  <div class="required">Моля изберете стоки и услуги!</div>`;
+  <div class="required"><br>Моля изберете стоки и услуги!</br></div>`;
   }
 
   for (var i = 0; i < 45; i++) {
