@@ -1,6 +1,5 @@
 // Put this is Avada Code Block:
 // <div class="fusion-text fusion-text-2">
-//     <br>
 //     <p style="text-align: center">&#8593;</p>
 //     <p id="choice" style="text-align: center;"></p>
 // </div>
@@ -37,7 +36,7 @@ setInterval(function () {
     for (var j = 0; j < classItemArrays[i].length; j++) {
       if (isFinalChecked(i, j)) {
         var paragraph = document.getElementById("choice");
-        paragraph.innerHTML = "Вие сте избрали следните стоки и услуги:";
+        paragraph.innerHTML = "<br>Вие сте избрали следните стоки и услуги:";
         hasChecked = true;
       }
     }

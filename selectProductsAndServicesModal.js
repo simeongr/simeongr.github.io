@@ -132,6 +132,7 @@ let inputFilter = () => {
         document.getElementById(`${legendID}`).removeAttribute("hidden");
         document.getElementById(`${divID}`).removeAttribute("hidden");
         showLegend = true;
+        // rotateArrow('arrow-${i}', ${i}) // TODO: when searching for item, the arrow is not rotated down
       } else {
         if (!document.getElementById(itemID).checked) {
           document.getElementById(`${divID}`).setAttribute("hidden", "hidden");
