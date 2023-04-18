@@ -55,7 +55,7 @@ setInterval(function () {
 
   if (!hasChecked) {
     var paragraph = document.getElementById("choice");
-    paragraph.innerHTML = `<p style="text-align: center">&#8593;</p>Моля изберете стоки и услуги!</div>`;
+    paragraph.innerHTML = `<div class="required">Моля изберете стоки и услуги!</div>`;
   }
 
   for (var i = 0; i < 45; i++) {
