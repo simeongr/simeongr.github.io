@@ -3,7 +3,7 @@
 //     <br>
 //     <p style="text-align: center">&#8593;</p>
 //     <p id="choice" style="text-align: center;">
-//         <div style="required:after { content:" *"; color: red;}">Моля изберете стоки и услуги!</div>
+//         <div class="required">Моля изберете стоки и услуги!</div>
 //     </p>
 // </div>
 // <script "application/javascript" src="https://simeongr.github.io/final-choice.js"></script>
@@ -55,7 +55,7 @@ setInterval(function () {
 
   if (!hasChecked) {
     var paragraph = document.getElementById("choice");
-    paragraph.innerHTML = `<p style="text-align: center">&#8593;</p><div style="required:after { content:" *"; color: red;}">Моля изберете стоки и услуги!</div>`;
+    paragraph.innerHTML = `<p style="text-align: center">&#8593;</p>Моля изберете стоки и услуги!</div>`;
   }
 
   for (var i = 0; i < 45; i++) {
