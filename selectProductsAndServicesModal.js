@@ -85,7 +85,13 @@ let showMoreButton = (text, i) => {
   return "";
 };
 
-let checkboxes = ``;
+let checkboxes = `
+<style>
+.self-register-checkbox {
+  margin-left: 100px;
+}
+</style>
+`;
 for (var i = 0; i < 45; i++) {
   const classText = `<b>${trimString(classDefinitions[i], i)}</b>`;
   const moreButton = showMoreButton(classDefinitions[i], i);
