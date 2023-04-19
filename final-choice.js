@@ -95,7 +95,7 @@ for (var i = 0; i < 45; i++) {
     const classText = classItemArrays[i][j];
     const itemID = `tmclass${i}-item-${j}-final`;
     checkboxesFinal += `
-    <div id="${itemID}-div" class="fusion-form-checkbox" hidden="hidden">
+    <div id="${itemID}-div" class="fusion-form-checkbox" style="text-align: center;" hidden="hidden">
         <input
           tabindex=""
           id="${itemID}"
