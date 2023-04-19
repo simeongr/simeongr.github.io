@@ -30,6 +30,11 @@ let isFinalChecked = (i, j) => {
   return document.getElementById(itemID).checked;
 };
 
+let uncheckModalItem = (i, j) => {
+  var itemID = `tmclass${i}-item-${j}`;
+  document.getElementById(itemID).checked = false;
+}
+
 setInterval(function () {
   var hasChecked = false;
   for (var i = 0; i < 45; i++) {
@@ -46,6 +51,7 @@ setInterval(function () {
     for (var j = 0; j < classItemArrays[i].length; j++) {
       if (!isFinalChecked(i, j)) {
         hideFinalDiv(i, j);
+        uncheckModalItem(i, j);
       }
     }
   }
