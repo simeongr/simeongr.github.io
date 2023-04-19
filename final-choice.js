@@ -88,14 +88,14 @@ setInterval(function () {
 document.write(`<fieldset id="classItemsCheckboxesForm-final"></fieldset>`);
 let checkboxesFinal = `<div style="text-align: center;">`;
 for (var i = 0; i < 45; i++) {
-  checkboxesFinal += `<legend id="legend-${i}-final" hidden="hidden">Клас ${
+  checkboxesFinal += `<legend id="legend-${i}-final" style="text-align: left;" hidden="hidden">Клас ${
     i + 1
   }</legend>`;
   for (var j = 0; j < classItemArrays[i].length; j++) {
     const classText = classItemArrays[i][j];
     const itemID = `tmclass${i}-item-${j}-final`;
     checkboxesFinal += `
-    <div id="${itemID}-div" class="fusion-form-checkbox" hidden="hidden">
+    <div id="${itemID}-div" class="fusion-form-checkbox" style="text-align: left;" hidden="hidden">
         <input
           tabindex=""
           id="${itemID}"
