@@ -1,0 +1,3 @@
+<script>document.write(`<fieldset id="classItemsCheckboxesForm"></fieldset>`)</script>
+<script type="application/javascript" src="https://simeongr.github.io/items.js"></script>
+<script type="application/javascript" src="https://simeongr.github.io/showItems.js"></script>
