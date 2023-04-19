@@ -86,21 +86,11 @@ setInterval(function () {
 }, 500);
 
 document.write(`<fieldset id="classItemsCheckboxesForm-final"></fieldset>`);
-let checkboxesFinal = `
-<style>
-.finalCheckboxesCentered {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-}
-</style>
-<div class="finalCheckboxesCentered">`;
+let checkboxesFinal = `<div style="text-align: center;">`;
 for (var i = 0; i < 45; i++) {
-  checkboxesFinal += `<legend id="legend-${i}-final" hidden="hidden">Клас ${
+  checkboxesFinal += `<legend id="legend-${i}-final" hidden="hidden"><b>Клас ${
     i + 1
-  }</legend>`;
+  }</b></legend>`;
   for (var j = 0; j < classItemArrays[i].length; j++) {
     const classText = classItemArrays[i][j];
     const itemID = `tmclass${i}-item-${j}-final`;
